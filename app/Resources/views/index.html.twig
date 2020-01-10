@@ -1,7 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="my-slider">
+        <div><img src="{{ asset('img/CollHA2019JOTT.jpg') }}"></div>
+        <div><img src="{{ asset('img/CollHA2019SJ.jpg') }}"></div>
+    </div>
 
+    <div class="test"></div>
+
+    <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev" aria-controls="customize" tabindex="-1" data-controls="prev">
+            <img src="{{ asset('img/angle-left.png') }}" alt="">
+        </li>
+        <li class="next" aria-controls="customize" tabindex="-1" data-controls="next">
+            <img src="{{ asset('img/angle-right.png') }}" alt="">
+        </li>
+    </ul>
 
 
 {% endblock %}
