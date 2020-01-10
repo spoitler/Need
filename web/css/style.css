@@ -1,0 +1,114 @@
+body{
+    background-color: red;
+    margin:0;
+    padding:0;
+}
+
+.nav-link span:hover{
+    border-bottom: solid #af5e25 2px;
+}
+
+.navbar{
+    position: relative;
+}
+
+#navbarNav{
+    text-align: center;
+
+}
+
+.dropdown-menu{
+    flex-wrap: wrap;
+}
+
+.dropdown-item{
+    min-width: 130px;
+    text-align: center;
+}
+
+.dropdown:hover + .dropdown-menu, .dropdown-menu:hover{
+    display: flex;
+}
+
+@media (min-width: 991px){
+
+    .dropdown:hover + .dropdown-menu, .dropdown-menu:hover{
+        overflow: hidden;
+        display: block;
+    }
+
+    .dropdown:hover + .menu{
+        animation: menu .3s;
+    }
+
+    .dropdown:hover + .marques{
+        animation: marques .3s;
+    }
+
+    @-webkit-keyframes menu {
+        from {height: 0px;}
+        to {height: 300px;}
+    }
+
+    /* Standard syntax */
+    @keyframes menu {
+        from {height: 0px;}
+        to {height: 300px;}
+    }
+
+    @-webkit-keyframes marques {
+        from {height: 0px;}
+        to {height: 400px;}
+    }
+
+    /* Standard syntax */
+    @keyframes marques {
+        from {height: 0px;}
+        to {height: 400px;}
+    }
+
+    .dropdown-menu{
+        position: absolute;
+    }
+
+    .nav-item{
+        margin: 10px;
+    }
+
+    .navbar{
+        position: -webkit-sticky;
+        position: sticky !important;
+        top: 0px;
+        padding:0 !important;
+        z-index: 999;
+
+    }
+
+    #navbarNav img{
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    /* Standard syntax */
+    @keyframes stick {
+        from {width: 250px;}
+        to {width: 100px;}
+    }
+
+    /* Standard syntax */
+    @keyframes unstick {
+        from {width: 100px;}
+        to {width: 250px;}
+    }
+
+    #navbarNav{
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        margin: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 1;
+    }
+
+}
