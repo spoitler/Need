@@ -294,6 +294,44 @@ body{
     border-radius: 5px;
 }
 
+.bandeau-info{
+    width: 100%;
+    height: auto;
+    background-image: url("/img/bg_bandeau.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content-bandeau{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.grey-para{
+    color: gray;
+    font-size: 14px;
+
+}
+
+#para-tel{
+    margin: 0;
+}
+
+.content-bandeau p:first-child{
+    margin: 0 !important;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.content-bandeau div{
+    margin: 1rem !important;
+}
+
+/*.container-bg-bandeau img{*/
+/*    width: 100%;*/
+/*}*/
 
 
 
@@ -306,15 +344,20 @@ body{
 
 
 
+@media (min-width: 768px){
+    .content-bandeau{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px 0;
+    }
+
+    .item-ipad-left{
+        margin-bottom: 0;
+    }
 
 
-
-
-
-
-
-
-
+}
 
 @media (min-width: 991px){
 
@@ -414,5 +457,18 @@ body{
         width: 48%;
         margin: auto;
     }
+
+    .content-bandeau{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    .item-ipad-left{
+        margin-bottom: 0;
+    }
+
 
 }
