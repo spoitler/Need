@@ -52,10 +52,20 @@ var slider = tns({
     autoplayButton: ".test"
 });
 
-var slider = tns({
+
+
+var slider_news = tns({
     container: '.slider-news',
-    items: 5,
+    responsive: {
+        0: {
+            items: 3,
+        },
+        991: {
+            items: 5
+        }
+    },
     slideBy: "page",
+    // edgePadding: 50,
     // autoplay: true,
     speed: 800,
     mouseDrag: true,
@@ -63,7 +73,7 @@ var slider = tns({
     nav: false,
     controlsContainer: "#customize-controls",
     // controls: false,
-    autoplayText: ["",""],
-    autoplayButton: ".test"
+    // autoplayText: ["",""],
+    // autoplayButton: ".test"
 });
 
