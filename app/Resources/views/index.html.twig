@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {#    *********************************** SLIDER ***********************************    #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+
     <div class="my-slider">
         <div><p><img src="{{ asset('img/CollHA2019JOTT.jpg') }}"></p></div>
         <div><p><img src="{{ asset('img/CollHA2019SJ.jpg') }}"></p></div>
@@ -185,10 +190,73 @@
         </div>
     </div>
 
+    <div class="content-footer">
+        <div class="nav-footer">
+            <div class="items-nav-footer">
+                <a href="{{ path('need_home') }}"><h5>Accueil</h5></a>
+                <div class="cache">
+                    <a href=""><h5>Homme</h5></a>
+                    <ul>
+                        <a href=""><li>Doudounes</li></a>
+                        <a href=""><li>Vestes</li></a>
+                        <a href=""><li>Pulls/Sweats</li></a>
+                        <a href=""><li>Chemises</li></a>
+                        <a href=""><li>T-shirts</li></a>
+                        <a href=""><li>Chaussures</li></a>
+                        <a href=""><li>Jeans/Chinos</li></a>
+                        <a href=""><li>Shorts</li></a>
+                        <a href=""><li>Accessoires</li></a>
+                    </ul>
+                </div>
+                <div class="cache">
+                    <a href=""><h5>Femme</h5></a>
+                    <ul>
+                        <a href=""><li>Doudounes</li></a>
+                        <a href=""><li>Vestes</li></a>
+                        <a href=""><li>Pulls/Gilets</li></a>
+                        <a href=""><li>Chemises/Tops</li></a>
+                        <a href=""><li>Shorts</li></a>
+                        <a href=""><li>Chaussures</li></a>
+                        <a href=""><li>Jeans/Chinos</li></a>
+                        <a href=""><li>Robes/Jupes</li></a>
+                        <a href=""><li>Accessoires</li></a>
+                    </ul>
+                </div>
+                <div class="cache">
+                    <a href=""><h5>Marques</h5></a>
+                    <ul>
+                        <a href=""><li>SCOTCH&SODA</li></a>
+                        <a href=""><li>ANTHONY MORATO</li></a>
+                        <a href=""> <li>SAINT JAMES</li></a>
+                        <a href=""> <li>NUMÉROLOGIE</li></a>
+                        <a href=""> <li>MARINE DE SAVOIE</li></a>
+                        <a href=""> <li>BENSON&CHERRY</li></a>
+                        <a href=""><li>SCHOMOOVE</li></a>
+                        <a href=""> <li>ARMISTICE</li></a>
+                        <a href=""><li>JOTT</li></a>
+                        <a href=""><li>SALSA JEANS</li></a>
+                        <a href=""><li>LA PETITE ETOILE</li></a>
+                        <a href=""><li>Voir plus....</li></a>
+                    </ul>
+                </div>
+                <a class="cache" href=""><h5>À propos</h5></a>
+                <a href=""><h5>Nous contacter</h5></a>
+            </div>
+            <div class="follow-footer">
+                <h5>Nous suivre</h5>
+                <div>
+                    <a href="https://www.facebook.com/needmtp" target="_blank"><p><img src="{{ asset('img/facebook-logo.png') }}"></p></a>
+                    <a href="https://www.instagram.com/need_montpellier/" target="_blank"><p><img src="{{ asset('img/instagram.png') }}"></p></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyrigth">
+
+        </div>
+    </div>
+
 
 {% endblock %}
 
-{% block stylesheets %}
-
-{% endblock %}
+{% block stylesheets %}{% endblock %}
 

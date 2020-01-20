@@ -15,13 +15,13 @@
         </a>
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a href="#" class="nav-link">
+                <a href="{{ path('need_home') }}" class="nav-link">
                     <span>Accueil</span>
                 </a>
 
             </li>
             <li class="nav-item active dropdown">
-                <a href="#" class="nav-link dropdown"><span>Homme</span></a>
+                <a href="{{ path('need_homme') }}" class="nav-link dropdown"><span>Homme</span></a>
                 <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">
                     <div><a class="dropdown-item" href="#">Doudounes</a></div>
                     <div><a class="dropdown-item" href="#">Vestes</a></div>
@@ -72,5 +72,10 @@
                 <a href="#" class="nav-link"><span>Contact</span></a>
             </li>
         </ul>
+
+    </div>
+    <div class="connexion-shoppingcard">
+        <p><a class="nav-link">Connexion</a></p>
+        <p><a class="nav-link">Panier</a></p>
     </div>
 </nav>

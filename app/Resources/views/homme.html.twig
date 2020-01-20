@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3 class="title-homme">Homme \ Toutes catégories</h3>
+<div class="content-homme">
+    <div class="side-filter-homme">
+        <div class="side-categories">
+            <div class="title-filter-homme"><h5>catégories</h5>
+                <select class="filter-bar__select" id="filter-bar-categories">
+                    <option selected="true">Toutes catégories</option>
+                    <option>Doudounes</option>
+                    <option>Vestes</option>
+                    <option>Pulls / Sweats</option>
+                    <option>Chemises</option>
+                    <option>T-shirts</option>
+                    <option>Chaussures</option>
+                    <option>Jeans / Chinos</option>
+                    <option>Shorts</option>
+                    <option>Accessoires</option>
+                </select>
+                <div class="content-categories-homme cache">
+                    <p>Toutes catégories</p>
+                    <p>Doudounes</p>
+                    <p>Vestes</p>
+                    <p>Pulls / Sweats</p>
+                    <p>Chemises</p>
+                    <p>T-shirts</p>
+                    <p>Chaussures</p>
+                    <p>Jeans / Chinos</p>
+                    <p>Shorts</p>
+                    <p>Accessoires</p>
+                </div>
+            </div>
+        </div>
+        <div class="side-tailles">
+            <div class="title-filter-homme"><h5>Tailles</h5></div>
+            <select class="filter-bar__select" id="filter-bar-size">
+                <option>XS</option>
+                <option>S</option>
+                <option selected="true">M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>3XL</option>
+                <option>4XL</option>
+            </select>
+            <div class="content-taille-homme cache">
+                <div><span>XS</span></div>
+                <div><span>S</span></div>
+                <div><span>M</span></div>
+                <div><span>L</span></div>
+                <div><span>XL</span></div>
+                <div><span>XXL</span></div>
+                <div><span>3XL</span></div>
+                <div><span>4XL</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-clothes">
+        <div class="items-news">
+            <p><img src="{{ asset('img/item_1.jpg') }}"></p>
+            <div class="line"></div>
+            <div class="info-item-news">
+                <p>Chino slim fit</p>
+                <p>99,90 €</p>
+            </div>
+        </div>
+        <div class="items-news">
+            <p><img src="{{ asset('img/item_1.jpg') }}"></p>
+            <div class="line"></div>
+            <div class="info-item-news">
+                <p>Chino slim fit</p>
+                <p>99,90 €</p>
+            </div>
+        </div>
+        <div class="items-news">
+            <p><img src="{{ asset('img/item_1.jpg') }}"></p>
+            <div class="line"></div>
+            <div class="info-item-news">
+                <p>Chino slim fit</p>
+                <p>99,90 €</p>
+            </div>
+        </div>
+        <div class="items-news">
+            <p><img src="{{ asset('img/item_1.jpg') }}"></p>
+            <div class="line"></div>
+            <div class="info-item-news">
+                <p>Chino slim fit</p>
+                <p>99,90 €</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% endblock %}
+
+    {% block stylesheets %}{% endblock %}
+

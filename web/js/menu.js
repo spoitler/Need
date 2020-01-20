@@ -65,7 +65,7 @@ var slider_news = tns({
         }
     },
     slideBy: "page",
-    // edgePadding: 50,
+    edgePadding: 50,
     // autoplay: true,
     speed: 800,
     mouseDrag: true,

@@ -5,17 +5,15 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
-class NeedController extends Controller
+class ClothesController extends Controller
 {
 
     /**
-     * @Route ("/home", name="need_home")
+     * @Route ("/homme", name="need_homme")
      */
 
     public function indexAction()
     {
-        $message = "hello World ! ";
-
-        return $this->render('index.html.twig', array());
+        return $this->render('homme.html.twig', array());
     }
 }
