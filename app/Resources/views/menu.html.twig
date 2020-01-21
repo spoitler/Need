@@ -1,16 +1,15 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-
     <div id="nav-responsive" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <a class="navbar-brand mobile" href="#">
+    <a class="navbar-brand mobile" href="{{ path('need_home') }}">
         <img src="https://static.wixstatic.com/media/3ad43d_8b3a733c53d94ba8bff949ac833a95fe~mv2.jpg/v1/crop/x_193,y_162,w_1159,h_462/fill/w_266,h_105,al_c,q_80,usm_2.00_1.00_0.00/3ad43d_8b3a733c53d94ba8bff949ac833a95fe~mv2.webp" class="d-inline-block align-top" alt="">
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <a class="navbar-brand desktop" href="#">
+        <a class="navbar-brand desktop" href="{{ path('need_home') }}">
             <img id="logo" src="https://static.wixstatic.com/media/3ad43d_8b3a733c53d94ba8bff949ac833a95fe~mv2.jpg/v1/crop/x_193,y_162,w_1159,h_462/fill/w_266,h_105,al_c,q_80,usm_2.00_1.00_0.00/3ad43d_8b3a733c53d94ba8bff949ac833a95fe~mv2.webp" class="d-inline-block align-top" alt="">
         </a>
         <ul class="navbar-nav">
@@ -49,7 +48,7 @@
                 </div>
             </li>
             <li class="nav-item active dropdown">
-                <a href="#" class="nav-link dropdown"><span>Marques</span></a>
+                <a href="{{ path('need_marques') }}" class="nav-link dropdown"><span>Marques</span></a>
                 <div class="dropdown-menu marques" aria-labelledby="navbarDropdownMenuLink">
                     <div><a class="dropdown-item" href="#">Just Over The Top ( JOTT )</a></div>
                     <div><a class="dropdown-item" href="#">Scotch & Soda</a></div>
@@ -75,7 +74,14 @@
 
     </div>
     <div class="connexion-shoppingcard">
-        <p><a class="nav-link">Connexion</a></p>
-        <p><a class="nav-link">Panier</a></p>
+        <p><a class="nav-link initial user-logo"><img src="{{ asset('img/user.png') }}"></a></p>
+        <div id="shopping-cart">
+            <a class="nav-link"><p><img src="{{ asset('img/shopping-cart-vide.png') }}"></p></a>
+            <div id="notification-icon">
+                <span>
+                    <span id="count">0</span>
+                </span>
+            </div>
+        </div>
     </div>
 </nav>

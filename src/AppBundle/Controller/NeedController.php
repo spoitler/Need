@@ -18,4 +18,16 @@ class NeedController extends Controller
 
         return $this->render('index.html.twig', array());
     }
+
+    /**
+     * @Route ("/marques", name="need_marques")
+     */
+
+    public function marquesAction()
+    {
+
+        return $this->render('marques.html.twig', array());
+    }
+
+
 }
