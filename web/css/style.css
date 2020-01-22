@@ -548,6 +548,10 @@ body{
     margin-top: -50px;
 }
 
+.content-form-contact{
+    display: block;
+}
+
 @media (min-width: 500px) {
     .content-clothes{
         display: grid;
