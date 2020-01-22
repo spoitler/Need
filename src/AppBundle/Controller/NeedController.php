@@ -39,6 +39,16 @@ class NeedController extends Controller
         return $this->render('about.html.twig', array());
     }
 
+    /**
+     * @Route ("/contact", name="need_contact")
+     */
+
+    public function contactAction()
+    {
+
+        return $this->render('contact.html.twig', array());
+    }
+
 
 
 

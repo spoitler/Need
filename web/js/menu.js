@@ -28,6 +28,7 @@ function resize() {
     }
 }
 
+
 $(document).ready(function () {
     $('#nav-responsive').click(function () {
         $(this).toggleClass('open');
