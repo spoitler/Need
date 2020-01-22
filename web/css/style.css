@@ -501,6 +501,50 @@ body{
     margin: auto;
 }
 
+#content-map-about{
+    margin-right: 50px;
+}
+
+#map-about{
+    height: 400px;
+    width: 400px;
+    margin-top: 75px;
+}
+
+#image-marques{
+    width: 100%;
+}
+
+#content-about{
+    display: flex;
+}
+
+.items-about{
+    text-align: center;
+    font-size: 18px !important;
+    margin-top: 100px;
+}
+
+.content-image-about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 60%;
+    margin: 100px auto;
+}
+
+.content-image-about img{
+    height: auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+#about_2{
+    margin-top: 50px;
+}
+
+#about_3{
+    margin-top: -50px;
+}
 
 @media (min-width: 500px) {
     .content-clothes{
@@ -760,9 +804,5 @@ body{
         display: block;
         position: sticky;
         top: 90px;
-    }
-
-    #image-marques{
-        width: 100%;
     }
 }

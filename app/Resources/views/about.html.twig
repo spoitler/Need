@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <p class="items-about">Need est une boutique multi marques de prêt-à-porter pour femmes et hommes, basé dans le centre de Montpellier, en face de la place Jean Jaurès </p>
+    <div id="content-about">
+        <div class="content-image-about">
+            <p><img src="{{ asset('img/about_1.jpg') }}"></p>
+            <p><img id="about_2" src="{{ asset('img/about_2.jpg') }}"></p>
+            <p><img id="about_3" src="{{ asset('img/about_3.jpg') }}"></p>
+        </div>
+        <div id="content-map-about" style="overflow:hidden;width: 400px;position: relative;"><iframe id="map-about" width="400" height="440" src="https://maps.google.com/maps?width=400&amp;height=440&amp;hl=en&amp;q=6%20rue%20de%20la%20loge%2C%20montpellier+(Titre)&amp;ie=UTF8&amp;t=&amp;z=18&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/en/">https://embedgooglemaps.com/en/</a> & <a href="http://botonmegusta.org/">w://botonmegusta.org/</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
