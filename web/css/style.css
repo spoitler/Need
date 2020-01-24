@@ -548,8 +548,26 @@ body{
     margin-top: -50px;
 }
 
-.content-form-contact{
-    display: block;
+.content-form-contact {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.items-contact{
+    margin: 10px 0;
+    /*border-radius: 5px;*/
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+.items-contact:last-child{
+    resize: none;
+}
+
+.items-contact:focus{
+    border-bottom: solid 2px #af5e25;
 }
 
 @media (min-width: 500px) {
