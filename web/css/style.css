@@ -642,6 +642,14 @@ body{
     .follow-footer{
         right: 100px;
     }
+
+    #shopping-cart{
+        padding-right: 50px;
+    }
+
+    #notification-icon{
+        margin-right: 50px;
+    }
 }
 
 @media (min-width: 991px){
@@ -727,7 +735,7 @@ body{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-30%,-50%);
+        transform: translate(-25%,-50%);
         width: 70%;
     }
 
