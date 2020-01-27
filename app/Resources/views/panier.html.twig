@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Produit</th>
+            <th scope="col">Description</th>
+            <th scope="col">Taille</th>
+            <th scope="col">Couleur</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry the Bird</td>
+            <td>Thornton</td>
+            <td>Thornton</td>
+            <td>@twitter</td>
+            <td>Thornton</td>
+            <td>Thornton</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
+{#
+    - photo de l'article
+    - Titre de l'article
+    - caracteristique (couleur, taille)
+    - approvisionnement ( a discuter si on affiche ou pas )
+    - la quantité prise
+    - modification
+        1) couleur
+        2) taille
+        3) quantite
+    - prix tres visible (plus gros, en gras)
+    - precision TTC et frais de livraisons
+    - indiquer les differnetes etapes de paiement
+    - bouton valider (valider mon panier) bien mis en avant
+    - champ code promo "caché"
+
+
+
+    #}
