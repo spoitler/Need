@@ -2,12 +2,35 @@
 
 {% block body %}
 
-    <h2>Nous contactez</h2>
-    <div class="content-form-contact">
-        <input class="items-contact" type="text" placeholder="Nom">
-        <input class="items-contact" type="text" placeholder="Prénom">
-        <input class="items-contact" type="email" placeholder="Email">
-        <textarea rows="6" class="items-contact" placeholder="Message"></textarea>
+    <h2 id="title-contact">Nous contactez</h2>
+    <div class="content-contact">
+        <div class="content-form-contact">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Prénom" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="inputMessage" placeholder="Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+
+        </div>
+        <div class="side-right-contact" id="or-contact">
+            <p>Ou</p>
+        </div>
+        <div class="side-right-contact">
+            <p><strong>Email</strong> : needmontpellier@gmail.com</p>
+            <p><strong>Tel</strong> :  04 67 67 27 27</p>
+        </div>
     </div>
 {% endblock %}
 
