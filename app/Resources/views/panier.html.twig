@@ -1,61 +1,120 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <table class="table table-sm">
-        <thead>
-        <tr>
-            <th scope="col">Produit</th>
-            <th scope="col">Description</th>
-            <th scope="col">Taille</th>
-            <th scope="col">Couleur</th>
-            <th scope="col">Quantité</th>
-            <th scope="col">Prix</th>
-            <th scope="col">Total</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>Thornton</td>
-            <td>Thornton</td>
-            <td>@twitter</td>
-            <td>Thornton</td>
-            <td>Thornton</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">5</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">6</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        </tbody>
-    </table>
+    <h3 class="title-homme">Panier \</h3>
+    <div class="container-panier">
+        <table class="table table-sm panier">
+            <thead>
+            <tr>
+                <th scope="col">Produit</th>
+                <th scope="col">Description</th>
+                <th scope="col">Taille</th>
+                <th scope="col">Couleur</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix TTC</th>
+                <th scope="col">Total TTC</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"><img class="img-panier" src="{{ asset('img/item_1.jpg') }}"></th>
+                <td>Chino Slim<br>98% coton<br>Fermeture éclair et boutonnée</td>
+                <td>
+                    <select class="taille-panier">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>3XL</option>
+                        <option>4XL</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="taille-panier">
+                        <option>Rouge</option>
+                        <option>Noir</option>
+                        <option>Bleu</option>
+                        <option>Gris</option>
+                        <option>Vert</option>
+                        <option>Jaune</option>
+                        <option>Orange</option>
+                        <option>Blanc</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="container-quantite-panier">
+                        <div class="controller-quantite-panier"><button id="button-moins-panier"><span>-</span></button></div>
+                        <p class="item-quantite-panier" id="quantity">1</p>
+                        <div class="controller-quantite-panier"><button id="button-plus-panier"><span>+</span></button></div>
+                    </div>
+                </td>
+                <td>99.90€</td>
+                <td><strong>99.90€</strong></td>
+                <td><a class="cross-item-panier">X</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><img class="img-panier" src="{{ asset('img/item_1.jpg') }}"></th>
+                <td>Chino Slim<br>98% coton<br>Fermeture éclair et boutonnée</td>
+                <td>
+                    <select class="taille-panier">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>3XL</option>
+                        <option>4XL</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="taille-panier">
+                        <option>Rouge</option>
+                        <option>Noir</option>
+                        <option>Bleu</option>
+                        <option>Gris</option>
+                        <option>Vert</option>
+                        <option>Jaune</option>
+                        <option>Orange</option>
+                        <option>Blanc</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="container-quantite-panier">
+                        <div class="controller-quantite-panier"><button id="button-moins-panier"><span>-</span></button></div>
+                        <p class="item-quantite-panier" id="quantity">1</p>
+                        <div class="controller-quantite-panier"><button id="button-plus-panier"><span>+</span></button></div>
+                    </div>
+                </td>
+                <td>99.90€</td>
+                <td><strong>99.90€</strong></td>
+                <td><a class="cross-item-panier">X</a></td>
+            </tr>
+            </tbody>
+        </table>
 
+        <div class="container-resume-panier">
+            <h3>Résumé</h3>
+            <p>Sous-total TTC  <span>199,80€</span></p>
+            <p id="livraison-panier">Livraison  <span>7,50€</span></p>
+            <p id="commentaire-livraison-panier">Livraison sous 3 à 5 jours ouvrables</p>
+            <p>Total TTC <span><strong>207.3€</strong></span></p>
+            <div id="check-panier">
+                <a>Valider mon panier</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/panier.js') }}"></script>
 {% endblock %}
 
 {% block stylesheets %}{% endblock %}

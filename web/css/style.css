@@ -576,6 +576,138 @@ body{
     resize: none;
 }
 
+
+/*************************************************************************/
+
+.taille-panier{
+    text-align: center;
+    -moz-appearance: textfield;
+    display: block;
+    height: 32px;
+    width: 60px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid
+    #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px
+    rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.container-quantite-panier{
+    display: flex;
+}
+
+.controller-quantite-panier{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    text-align: center;
+}
+
+.controller-quantite-panier button{
+    background-color: lightgray;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+
+.controller-quantite-panier button:focus{
+    outline: 0 !important;
+}
+
+.controller-quantite-panier span{
+    margin: auto;
+    height: 30px;
+    line-height: 25px;
+    display: inline-block;
+}
+
+.item-quantite-panier{
+    margin: auto 10px;
+}
+
+.img-panier{
+    height: auto;
+    width: 120px;
+}
+
+#total-panier{
+    text-align: right;
+    text-transform: uppercase;
+}
+
+tfoot{
+    font-size: 1.2em;
+}
+
+#check-panier{
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+#check-panier a{
+    background-color: #af5e25;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    margin: 20px 0;
+    width: 100%;
+    display: inline-block;
+}
+
+.panier{
+    margin: 30px;
+}
+
+thead th{
+    border-bottom: 1px !important;
+}
+
+.table{
+    width: 70% !important;
+}
+
+thead{
+    color: #696969ba !important;
+}
+
+.table td, .table th{
+    border-bottom: solid 1px #6969692e  !important;
+    border-top: none !important;
+}
+
+
+.table td{
+    vertical-align: middle !important;
+}
+
+.table tr{
+    margin: 10px;
+}
+
+.cross-item-panier{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container-resume-panier h3{
+    border-bottom: solid 1px black;
+}
+
+
+
 @media (min-width: 500px) {
     .content-clothes{
         display: grid;
@@ -912,5 +1044,35 @@ body{
         margin: auto;
     }
 
+    .container-panier{
+        display: flex;
+        width: 100%;
+    }
+
+    .container-resume-panier {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .container-resume-panier h3{
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .container-resume-panier span{
+        float: right;
+        margin-left: 100px;
+    }
+
+    #livraison-panier{
+        margin-bottom: 0;
+    }
+
+    #commentaire-livraison-panier{
+        color: gray;
+        margin-top: 0;
+        font-size: 12px;
+        padding: 0;
+    }
 
 }
