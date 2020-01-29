@@ -20,7 +20,8 @@
             <tr>
                 <th scope="row"><img class="img-panier" src="{{ asset('img/item_1.jpg') }}"></th>
                 <td>Chino Slim<br>98% coton<br>Fermeture éclair et boutonnée</td>
-                <td>
+                <td class="item-taille-panier">
+                    <p class="mobile">Taille </p>
                     <select class="taille-panier">
                         <option>XS</option>
                         <option>S</option>
@@ -32,8 +33,9 @@
                         <option>4XL</option>
                     </select>
                 </td>
-                <td>
-                    <select class="taille-panier">
+                <td class="item-taille-panier">
+                    <p class="mobile">Couleur </p>
+                    <select class="taille-panier item-couleur-panier">
                         <option>Rouge</option>
                         <option>Noir</option>
                         <option>Bleu</option>
@@ -46,52 +48,16 @@
                 </td>
                 <td>
                     <div class="container-quantite-panier">
-                        <div class="controller-quantite-panier"><button id="button-moins-panier"><span>-</span></button></div>
+                        <div class="controller-quantite-panier"><button id="button-moins-panier"><span >-</span></button></div>
                         <p class="item-quantite-panier" id="quantity">1</p>
                         <div class="controller-quantite-panier"><button id="button-plus-panier"><span>+</span></button></div>
                     </div>
                 </td>
                 <td>99.90€</td>
-                <td><strong>99.90€</strong></td>
-                <td><a class="cross-item-panier">X</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><img class="img-panier" src="{{ asset('img/item_1.jpg') }}"></th>
-                <td>Chino Slim<br>98% coton<br>Fermeture éclair et boutonnée</td>
-                <td>
-                    <select class="taille-panier">
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                        <option>XXL</option>
-                        <option>3XL</option>
-                        <option>4XL</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="taille-panier">
-                        <option>Rouge</option>
-                        <option>Noir</option>
-                        <option>Bleu</option>
-                        <option>Gris</option>
-                        <option>Vert</option>
-                        <option>Jaune</option>
-                        <option>Orange</option>
-                        <option>Blanc</option>
-                    </select>
-                </td>
-                <td>
-                    <div class="container-quantite-panier">
-                        <div class="controller-quantite-panier"><button id="button-moins-panier"><span>-</span></button></div>
-                        <p class="item-quantite-panier" id="quantity">1</p>
-                        <div class="controller-quantite-panier"><button id="button-plus-panier"><span>+</span></button></div>
-                    </div>
-                </td>
-                <td>99.90€</td>
-                <td><strong>99.90€</strong></td>
-                <td><a class="cross-item-panier">X</a></td>
+                <div>
+                    <td><strong>99.90€</strong></td>
+                    <td><a class="cross-item-panier">X</a></td>
+                </div>
             </tr>
             </tbody>
         </table>
@@ -105,16 +71,20 @@
             <div id="check-panier">
                 <a>Valider mon panier</a>
             </div>
+{#            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">#}
+{#                <input type="hidden" name="cmd" value="_s-xclick">#}
+{#                <input type="hidden" name="hosted_button_id" value="TDTXWEJLR3QJJ">#}
+{#                <input type="image" src="{{ asset('img/paypal.png') }}" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">#}
+{#                <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">#}
+{#            </form>#}
+
 
         </div>
     </div>
 
-
-
-{% endblock %}
-
-{% block javascripts %}
     <script src="{{ asset('js/panier.js') }}"></script>
+
+
 {% endblock %}
 
 {% block stylesheets %}{% endblock %}

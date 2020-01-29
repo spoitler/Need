@@ -5,7 +5,6 @@ let count = 0;
 
 plus.onclick = () => {
     count = quantite.innerText;
-    console.log(count);
     count = parseInt(count,10);
     count += 1;
     quantite.innerText = count;
@@ -13,7 +12,6 @@ plus.onclick = () => {
 
 moins.onclick = () => {
     count = quantite.innerText;
-    console.log(count);
     count = parseInt(count,10);
     count -= 1;
     quantite.innerText = count;
