@@ -3,6 +3,10 @@ body{
     padding:0;
 }
 
+a{
+    text-decoration: none;
+}
+
 .nav-link span:hover{
     border-bottom: solid #af5e25 2px;
 }
@@ -750,8 +754,30 @@ thead th{
     padding: 0;
 }
 
+#promo-code-panier{
+    font-size: 16px;
+    color: #000;
+}
 
+#promo-code-panier{
+    text-decoration: none;
+}
 
+#promo-code-panier p:hover{
+    color: #af5e25;
+    cursor: pointer;
+}
+
+.container-promo-code{
+    display: none;
+}
+
+.container-promo-code a{
+    background-color: #af5e25;
+    color: #fff !important;
+    padding: 5px;
+    cursor: pointer;
+}
 
 
 

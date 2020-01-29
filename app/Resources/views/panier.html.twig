@@ -64,10 +64,19 @@
 
         <div class="container-resume-panier">
             <h3>Résumé</h3>
-            <p>Sous-total TTC  <span>199,80€</span></p>
+            <p>Sous-total TTC  <span>99,90€</span></p>
             <p id="livraison-panier">Livraison  <span>7,50€</span></p>
             <p id="commentaire-livraison-panier">Livraison sous 3 à 5 jours ouvrables</p>
-            <p>Total TTC <span><strong>207.3€</strong></span></p>
+            <br>
+            <a id="promo-code-panier" onclick="promoCode()" ><p>Vous avez un code promo ?</p></a>
+            <div class="container-promo-code">
+
+                <input type="text" placeholder="Code promo" class="content-promo-code" id="item-promo-code">
+                <a class="content-promo-code" >Valider</a>
+            </div>
+
+            <br>
+            <p>Total TTC <span><strong>107.4€</strong></span></p>
             <div id="check-panier">
                 <a>Valider mon panier</a>
             </div>
@@ -77,13 +86,10 @@
 {#                <input type="image" src="{{ asset('img/paypal.png') }}" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">#}
 {#                <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">#}
 {#            </form>#}
-
-
         </div>
     </div>
 
     <script src="{{ asset('js/panier.js') }}"></script>
-
 
 {% endblock %}
 
@@ -104,7 +110,4 @@
     - indiquer les differnetes etapes de paiement
     - bouton valider (valider mon panier) bien mis en avant
     - champ code promo "caché"
-
-
-
     #}
