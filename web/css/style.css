@@ -780,6 +780,11 @@ thead th{
     cursor: pointer;
 }
 
+.submit-btn-contact{
+    background-color: #af5e25 !important;
+    border: none !important;
+}
+
 
 
 
