@@ -463,6 +463,7 @@ a{
     padding: .5rem 0 !important;
     position: relative;
     top: 5px;
+    z-index: 999;
 }
 
 .connexion-button{

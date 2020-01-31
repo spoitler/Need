@@ -61,7 +61,6 @@
                     <div><a class="dropdown-item" href="#">La petite étoile</a></div>
                     <div><a class="dropdown-item" href="#">La Petite Française</a></div>
                     <div><a class="dropdown-item" href="#">DAPHNEA</a></div>
-                    <div><a class="dropdown-item" href="#">Jacadi</a></div>
                 </div>
             </li>
             <li class="nav-item active">
@@ -74,7 +73,7 @@
 
     </div>
     <div class="connexion-shoppingcard">
-        <p><a href="" class="nav-link initial user-logo"><img src="{{ asset('img/user.png') }}"></a></p>
+        <a href="{{ path('need_user') }}" class="nav-link initial user-logo"><p><img src="{{ asset('img/user.png') }}"></p></a>
         <div id="shopping-cart">
             <a href="{{ path('need_panier') }}" class="nav-link"><p><img src="{{ asset('img/shopping-cart-vide.png') }}"></p></a>
             <div id="notification-icon">
