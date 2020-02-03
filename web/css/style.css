@@ -773,6 +773,11 @@ thead th{
     display: none;
 }
 
+.item-price-cross-panier{
+    background-color: lightgray;
+    display: flex;
+}
+
 .container-promo-code a{
     background-color: #af5e25;
     color: #fff !important;
@@ -785,6 +790,66 @@ thead th{
     border: none !important;
 }
 
+.container-user{
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-user-menu{
+    border: solid 2px #000;
+    margin: 5px 0;
+    padding: 0;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-user-menu a{
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.item-user-menu p{
+    margin: 0;
+    padding: 0;
+    line-height: 45px;
+}
+
+#arrow-left-user {
+    height: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+.item-back-user{
+    background-color: lightgray;
+    color: #000;
+    width: 230px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.container-form-update-info-user{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.container-form-update-info-user button{
+    width: 100%;
+}
+
+
+.title-user-info{
+    font-weight: 600;
+}
 
 
 

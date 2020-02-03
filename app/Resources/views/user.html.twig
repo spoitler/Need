@@ -2,9 +2,22 @@
 
 {% block body %}
 
+    <h3 class="title-homme">Mon compte \</h3>
+
+    <div class="container-user">
+        <div class="item-user-menu">
+            <a href="{{ path('need_info') }}"><p>Général</p></a>
+        </div>
+        <div class="item-user-menu">
+            <a href="{{ path('need__modif_password') }}"><p>Modifier mon mot de passe</p></a>
+        </div>
+        <div class="item-user-menu">
+            <a href="{{ path('need__commandes') }}"><p>Mes commandes</p></a>
+        </div>
+    </div>
+
+
 {% endblock %}
 
-{% block stylesheets %}
-
-{% endblock %}
+{% block stylesheets %}{% endblock %}
 

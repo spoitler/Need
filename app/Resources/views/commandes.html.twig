@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h3 class="title-homme">Mon compte \ Mes commandes</h3>
+
+    <a href="{{ path('need_user') }}"><p class="item-back-user"><img id="arrow-left-user" src="{{ asset('img/arrow-left.png') }}">Revenir à mon compte</p></a>
+
+    <table class="table table-sm panier">
+        <thead>
+        <tr>
+            <th scope="col">Commande</th>
+            <th scope="col">Date</th>
+            <th scope="col">Prix totale</th>
+            <th scope="col">Paiement</th>
+            <th scope="col">État</th>
+            <th scope="col">Facture</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">#356421</th>
+            <td>27/01/2019</td>
+            <td>99.90 €</td>
+            <td>Stripe</td>
+            <td>Livré</td>
+            <td><button>PDF</button></td>
+            <div>
+                <td><button>Détails</button></td>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
