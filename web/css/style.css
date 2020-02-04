@@ -833,6 +833,8 @@ thead th{
     font-weight: 600;
     border-radius: 5px;
     padding: 7px;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .container-form-update-info-user{
