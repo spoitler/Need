@@ -853,6 +853,15 @@ thead th{
     font-weight: 600;
 }
 
+.form-user-info .row{
+    flex-direction: column !important;
+    flex-wrap: initial;
+}
+
+.align-user{
+    margin: auto;
+}
+
 
 
 @media (min-width: 500px) {
