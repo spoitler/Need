@@ -15,6 +15,11 @@ CREATE TABLE categories (
  categorie VARCHAR(25)
 );
 
+CREATE TABLE genres(
+  id_genre INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  genre VARCHAR(3)
+)
+
 CREATE TABLE civilites (
  id_civilite INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  civilite VARCHAR(25)

@@ -61,15 +61,20 @@
         </div>
     </div>
 
+
     <div class="content-clothes">
-        <div class="items-news items-clothes">
-            <p><img src="{{ asset('img/item_1.jpg') }}"></p>
-            <div class="line line-clothes"></div>
-            <div class="info-item-news">
-                <p>Chino slim fit</p>
-                <p>99,90 €</p>
+        {% for produit in arrayProduits %}
+            <div class="items-news items-clothes">
+                <p><img src="{{ asset( 'produit.image') }}"></p>
+                <div class="line line-clothes"></div>
+                <div class="info-item-news">
+                    <p>{{ produit.description }}</p>
+                    <p>{{ produit.prix }} €</p>
+                </div>
             </div>
-        </div>
+        {% else %}
+            <div><p>Aucun article trouvé</p></div>
+        {%  endfor %}
         <div class="items-news items-clothes">
             <p><img src="{{ asset('img/item_1.jpg') }}"></p>
             <div class="line line-clothes"></div>
