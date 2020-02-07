@@ -18,7 +18,7 @@ CREATE TABLE categories (
 CREATE TABLE genres(
   id_genre INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   genre VARCHAR(3)
-)
+);
 
 CREATE TABLE civilites (
  id_civilite INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -75,6 +75,8 @@ CREATE TABLE compose(
 
 CREATE TABLE produits (
  id_produit INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ image TEXT NOT NULL,
+ description TEXT NOT NULL,
  id_taille INT NOT NULL,
  id_couleur INT NOT NULL,
  stock INT NOT NULL,

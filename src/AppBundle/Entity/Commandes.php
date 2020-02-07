@@ -36,5 +36,62 @@ class Commandes
     private $dateCommande;
 
 
-}
 
+    /**
+     * Get idCommande
+     *
+     * @return integer
+     */
+    public function getIdCommande()
+    {
+        return $this->idCommande;
+    }
+
+    /**
+     * Set idClient
+     *
+     * @param integer $idClient
+     *
+     * @return Commandes
+     */
+    public function setIdClient($idClient)
+    {
+        $this->idClient = $idClient;
+
+        return $this;
+    }
+
+    /**
+     * Get idClient
+     *
+     * @return integer
+     */
+    public function getIdClient()
+    {
+        return $this->idClient;
+    }
+
+    /**
+     * Set dateCommande
+     *
+     * @param \DateTime $dateCommande
+     *
+     * @return Commandes
+     */
+    public function setDateCommande($dateCommande)
+    {
+        $this->dateCommande = $dateCommande;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCommande
+     *
+     * @return \DateTime
+     */
+    public function getDateCommande()
+    {
+        return $this->dateCommande;
+    }
+}

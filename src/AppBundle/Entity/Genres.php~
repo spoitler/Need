@@ -29,38 +29,5 @@ class Genres
     private $genre = 'NULL';
 
 
-
-    /**
-     * Get idGenre
-     *
-     * @return integer
-     */
-    public function getIdGenre()
-    {
-        return $this->idGenre;
-    }
-
-    /**
-     * Set genre
-     *
-     * @param string $genre
-     *
-     * @return Genres
-     */
-    public function setGenre($genre)
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
-
-    /**
-     * Get genre
-     *
-     * @return string
-     */
-    public function getGenre()
-    {
-        return $this->genre;
-    }
 }
+

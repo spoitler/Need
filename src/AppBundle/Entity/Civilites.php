@@ -29,5 +29,38 @@ class Civilites
     private $civilite = 'NULL';
 
 
-}
 
+    /**
+     * Get idCivilite
+     *
+     * @return integer
+     */
+    public function getIdCivilite()
+    {
+        return $this->idCivilite;
+    }
+
+    /**
+     * Set civilite
+     *
+     * @param string $civilite
+     *
+     * @return Civilites
+     */
+    public function setCivilite($civilite)
+    {
+        $this->civilite = $civilite;
+
+        return $this;
+    }
+
+    /**
+     * Get civilite
+     *
+     * @return string
+     */
+    public function getCivilite()
+    {
+        return $this->civilite;
+    }
+}

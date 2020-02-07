@@ -36,5 +36,62 @@ class Tailles
     private $idType = 'NULL';
 
 
-}
 
+    /**
+     * Get idTaille
+     *
+     * @return integer
+     */
+    public function getIdTaille()
+    {
+        return $this->idTaille;
+    }
+
+    /**
+     * Set taille
+     *
+     * @param string $taille
+     *
+     * @return Tailles
+     */
+    public function setTaille($taille)
+    {
+        $this->taille = $taille;
+
+        return $this;
+    }
+
+    /**
+     * Get taille
+     *
+     * @return string
+     */
+    public function getTaille()
+    {
+        return $this->taille;
+    }
+
+    /**
+     * Set idType
+     *
+     * @param integer $idType
+     *
+     * @return Tailles
+     */
+    public function setIdType($idType)
+    {
+        $this->idType = $idType;
+
+        return $this;
+    }
+
+    /**
+     * Get idType
+     *
+     * @return integer
+     */
+    public function getIdType()
+    {
+        return $this->idType;
+    }
+}

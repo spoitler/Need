@@ -92,5 +92,254 @@ class Produits
     private $idGenre;
 
 
-}
 
+    /**
+     * Get idProduit
+     *
+     * @return integer
+     */
+    public function getIdProduit()
+    {
+        return $this->idProduit;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Produits
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Produits
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set idTaille
+     *
+     * @param integer $idTaille
+     *
+     * @return Produits
+     */
+    public function setIdTaille($idTaille)
+    {
+        $this->idTaille = $idTaille;
+
+        return $this;
+    }
+
+    /**
+     * Get idTaille
+     *
+     * @return integer
+     */
+    public function getIdTaille()
+    {
+        return $this->idTaille;
+    }
+
+    /**
+     * Set idCouleur
+     *
+     * @param integer $idCouleur
+     *
+     * @return Produits
+     */
+    public function setIdCouleur($idCouleur)
+    {
+        $this->idCouleur = $idCouleur;
+
+        return $this;
+    }
+
+    /**
+     * Get idCouleur
+     *
+     * @return integer
+     */
+    public function getIdCouleur()
+    {
+        return $this->idCouleur;
+    }
+
+    /**
+     * Set stock
+     *
+     * @param integer $stock
+     *
+     * @return Produits
+     */
+    public function setStock($stock)
+    {
+        $this->stock = $stock;
+
+        return $this;
+    }
+
+    /**
+     * Get stock
+     *
+     * @return integer
+     */
+    public function getStock()
+    {
+        return $this->stock;
+    }
+
+    /**
+     * Set idReference
+     *
+     * @param string $idReference
+     *
+     * @return Produits
+     */
+    public function setIdReference($idReference)
+    {
+        $this->idReference = $idReference;
+
+        return $this;
+    }
+
+    /**
+     * Get idReference
+     *
+     * @return string
+     */
+    public function getIdReference()
+    {
+        return $this->idReference;
+    }
+
+    /**
+     * Set idCategories
+     *
+     * @param string $idCategories
+     *
+     * @return Produits
+     */
+    public function setIdCategories($idCategories)
+    {
+        $this->idCategories = $idCategories;
+
+        return $this;
+    }
+
+    /**
+     * Get idCategories
+     *
+     * @return string
+     */
+    public function getIdCategories()
+    {
+        return $this->idCategories;
+    }
+
+    /**
+     * Set idType
+     *
+     * @param integer $idType
+     *
+     * @return Produits
+     */
+    public function setIdType($idType)
+    {
+        $this->idType = $idType;
+
+        return $this;
+    }
+
+    /**
+     * Get idType
+     *
+     * @return integer
+     */
+    public function getIdType()
+    {
+        return $this->idType;
+    }
+
+    /**
+     * Set prix
+     *
+     * @param integer $prix
+     *
+     * @return Produits
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Get prix
+     *
+     * @return integer
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * Set idGenre
+     *
+     * @param integer $idGenre
+     *
+     * @return Produits
+     */
+    public function setIdGenre($idGenre)
+    {
+        $this->idGenre = $idGenre;
+
+        return $this;
+    }
+
+    /**
+     * Get idGenre
+     *
+     * @return integer
+     */
+    public function getIdGenre()
+    {
+        return $this->idGenre;
+    }
+}

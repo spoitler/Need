@@ -29,5 +29,38 @@ class Types
     private $type = 'NULL';
 
 
-}
 
+    /**
+     * Get idType
+     *
+     * @return integer
+     */
+    public function getIdType()
+    {
+        return $this->idType;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return Types
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+}
