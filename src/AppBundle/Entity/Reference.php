@@ -29,5 +29,38 @@ class Reference
     private $reference = 'NULL';
 
 
-}
 
+    /**
+     * Get idReference
+     *
+     * @return integer
+     */
+    public function getIdReference()
+    {
+        return $this->idReference;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $reference
+     *
+     * @return Reference
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Get reference
+     *
+     * @return string
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+}

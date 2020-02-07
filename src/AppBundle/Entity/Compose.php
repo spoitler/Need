@@ -43,5 +43,86 @@ class Compose
     private $quantite;
 
 
-}
 
+    /**
+     * Get idCompose
+     *
+     * @return integer
+     */
+    public function getIdCompose()
+    {
+        return $this->idCompose;
+    }
+
+    /**
+     * Set idCommande
+     *
+     * @param integer $idCommande
+     *
+     * @return Compose
+     */
+    public function setIdCommande($idCommande)
+    {
+        $this->idCommande = $idCommande;
+
+        return $this;
+    }
+
+    /**
+     * Get idCommande
+     *
+     * @return integer
+     */
+    public function getIdCommande()
+    {
+        return $this->idCommande;
+    }
+
+    /**
+     * Set idProduit
+     *
+     * @param integer $idProduit
+     *
+     * @return Compose
+     */
+    public function setIdProduit($idProduit)
+    {
+        $this->idProduit = $idProduit;
+
+        return $this;
+    }
+
+    /**
+     * Get idProduit
+     *
+     * @return integer
+     */
+    public function getIdProduit()
+    {
+        return $this->idProduit;
+    }
+
+    /**
+     * Set quantite
+     *
+     * @param integer $quantite
+     *
+     * @return Compose
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite
+     *
+     * @return integer
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
+    }
+}
