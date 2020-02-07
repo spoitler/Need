@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tailles" table="tailles">
+    <indexes>
+      <index name="fk_taille_type" columns="id_type"/>
+    </indexes>
+    <id name="idTaille" type="integer" column="id_taille">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="taille" type="string" column="taille" length="25" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+    <field name="idType" type="integer" column="id_type" nullable="true">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

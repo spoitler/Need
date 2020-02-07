@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Produits" table="produits">
+    <indexes>
+      <index name="fk_produits_tailles" columns="id_taille"/>
+      <index name="fk_produits_couleurs" columns="id_couleur"/>
+      <index name="fk_produits_reference" columns="id_reference"/>
+      <index name="fk_produits_categories" columns="id_categories"/>
+      <index name="fk_produits_types" columns="id_type"/>
+    </indexes>
+    <id name="idProduit" type="integer" column="id_produit">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idTaille" type="integer" column="id_taille" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idCouleur" type="integer" column="id_couleur" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="stock" type="integer" column="stock" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idReference" type="string" column="id_reference" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="idCategories" type="string" column="id_categories" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="idType" type="integer" column="id_type" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="prix" type="integer" column="prix" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
