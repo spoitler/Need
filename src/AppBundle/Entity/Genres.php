@@ -5,28 +5,28 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Types
+ * Genres
  *
- * @ORM\Table(name="types")
+ * @ORM\Table(name="genres")
  * @ORM\Entity
  */
-class Types
+class Genres
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_type", type="integer", nullable=false)
+     * @ORM\Column(name="id_genre", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idType;
+    private $idGenre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=25, nullable=true)
+     * @ORM\Column(name="genre", type="string", length=3, nullable=true)
      */
-    private $type = 'NULL';
+    private $genre = 'NULL';
 
 
 }

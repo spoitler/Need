@@ -11,6 +11,16 @@
     <id name="idProduit" type="integer" column="id_produit">
       <generator strategy="IDENTITY"/>
     </id>
+    <field name="image" type="text" column="image" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="description" type="text" column="description" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="idTaille" type="integer" column="id_taille" nullable="false">
       <options>
         <option name="unsigned"/>
@@ -42,6 +52,11 @@
       </options>
     </field>
     <field name="prix" type="integer" column="prix" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idGenre" type="integer" column="id_genre" nullable="false">
       <options>
         <option name="unsigned"/>
       </options>

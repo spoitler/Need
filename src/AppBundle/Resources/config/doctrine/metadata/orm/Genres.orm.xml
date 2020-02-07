@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Genres" table="genres">
+    <id name="idGenre" type="integer" column="id_genre">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="genre" type="string" column="genre" length="3" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="default">NULL</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
