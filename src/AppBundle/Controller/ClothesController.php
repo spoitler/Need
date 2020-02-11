@@ -14,13 +14,34 @@ class ClothesController extends Controller
 		return new ProduitManager($this->getDoctrine()->getManager());
 	}
 
-    /**
-     * @Route ("/homme", name="need_homme")
-     */
+	/**
+	 * @Route ("/homme", name="need_all_categories")
+	 * @throws \Doctrine\ORM\ORMException
+	 */
 
     public function indexAction()
     {
-    	$produits = $this->getManager()->loadAllProduits();
-        return $this->render('homme.html.twig', array('arrayProduits' => $produits));
+    	$produits = $this->getManager()->loadAllProduitsHomme();
+        return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => "Toutes catégories"));
     }
+
+	/**
+	 * @Route ("/femme", name="need_femme")
+	 */
+
+	public function femmeAction()
+	{
+		$produits = $this->getManager()->loadAllProduits();
+		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Toutes catégories"));
+	}
+
+	/**
+	 * @Route ("/femme/vestes", name="need_femme_veste")
+	 */
+
+	public function vesteAction()
+	{
+		$produits = $this->getManager()->loadProduit(0);
+		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Vestes"));
+	}
 }

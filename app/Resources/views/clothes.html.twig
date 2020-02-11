@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3 class="title-homme">{{ genre }} \ {{ categories }}</h3>
+<div class="content-homme">
+    <div class="side-filter-homme">
+        <div id="sticky-side-filter">
+            <div class="side-categories">
+                <div class="title-filter-homme"><h5>Catégories</h5>
+                    <select class="filter-bar__select" id="filter-bar-categories">
+                        <option selected="true">Toutes catégories</option>
+                        <option>Doudounes</option>
+                        <option>Vestes</option>
+                        <option>Pulls / Sweats</option>
+                        <option>Chemises</option>
+                        <option>T-shirts</option>
+                        <option>Chaussures</option>
+                        <option>Jeans / Chinos</option>
+                        <option>Shorts</option>
+                        <option>Accessoires</option>
+                    </select>
+                    <div class="content-categories-homme cache">
+                        <a href="{{ path('need_all_categories') }}" class="link-color"><p>Toutes catégories</p></a>
+                        <a href="/{{ genre }}/doudounes" class="link-color"><p>Doudounes</p></a>
+                        <a href="/{{ genre }}/vestes" class="link-color"><p>Vestes</p></a>
+                        <a href="/{{ genre }}/pulls" class="link-color"><p>Pulls / Sweats</p></a>
+                        <a href="/{{ genre }}/chemises" class="link-color"><p>Chemises</p></a>
+                        <a href="/{{ genre }}/t-shirts" class="link-color"><p>T-shirts</p></a>
+                        <a href="/{{ genre }}/chaussures" class="link-color"><p>Chaussures</p></a>
+                        <a href="/{{ genre }}/jeans-chinos" class="link-color"><p>Jeans / Chinos</p></a>
+                        <a href="/{{ genre }}/shorts" class="link-color"><p>Shorts</p></a>
+                        <a href="/{{ genre }}/accessoires" class="link-color"><p>Accessoires</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="side-tailles">
+                <div class="title-filter-homme"><h5>Tailles</h5>
+                    <select class="filter-bar__select" id="filter-bar-size">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option selected="true">M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>3XL</option>
+                        <option>4XL</option>
+                    </select>
+                    <div class="content-taille-homme cache">
+                        <div class="items-taille"><span>XS</span></div>
+                        <div class="items-taille"><span>S</span></div>
+                        <div class="items-taille"><span>M</span></div>
+                        <div class="items-taille"><span>L</span></div>
+                        <div class="items-taille"><span>XL</span></div>
+                        <div class="items-taille"><span>XXL</span></div>
+                        <div class="items-taille"><span>3XL</span></div>
+                        <div class="items-taille"><span>4XL</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-clothes">
+        {% for produit in arrayProduits %}
+            <div class="items-news items-clothes">
+                <p><img src="{{ asset( produit.image) }}"></p>
+                <div class="line line-clothes"></div>
+                <div class="info-item-news">
+                    <p>{{  produit.description }}</p>
+                    <p>{{ produit.prix }} €</p>
+                </div>
+            </div>
+        {% else %}
+            <div><p>Aucun article trouvé</p></div>
+        {%  endfor %}
+        </div>
+    </div>
+</div>
+
+
+    {% endblock %}
+
+    {% block stylesheets %}{% endblock %}
+

@@ -4,7 +4,11 @@ body{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+.link-color{
+    color: #000;
 }
 
 .nav-link span:hover{
@@ -415,6 +419,10 @@ a{
 .title-homme{
     text-align: center;
     font-weight: 600;
+}
+
+.title-homme::first-letter{
+    text-transform: uppercase;
 }
 
 .title-filter-homme h5{
