@@ -3,6 +3,8 @@ body{
     padding:0;
 }
 
+*{outline: none}
+
 a{
     text-decoration: none !important;
 }
@@ -871,6 +873,67 @@ thead th{
 }
 
 
+/******************************\
+        PRODUCT PAGE
+\******************************/
+.container-selection-product{
+    height:auto;
+    width: 98px;
+    display: block;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.container-selection-product img{
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    height: auto;
+}
+
+#container-all-product{
+    display: flex;
+}
+
+.container-zoom img{
+    height: 200px;
+    width: auto;
+}
+
+.ex-thumbnail-zoom {
+    cursor: crosshair;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+}
+
+.ex-thumbnail-zoom-img {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ex-zoom-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+}
+
+.item-product{
+    padding: 0 !important;
+}
 
 @media (min-width: 500px) {
     .content-clothes{

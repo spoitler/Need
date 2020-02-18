@@ -42,12 +42,14 @@ class ProduitManager
 	 * @throws \Doctrine\ORM\ORMException
 	 */
 
-	public function loadAllProduitsHomme()
+	public function loadAllProduitsGenre($genre)
 	{
 		$query = $this->repository->createQueryBuilder('p')
+			->select('p', 't.type')
 			->innerJoin('AppBundle:Genres', 'g', Join::WITH, 'p.idGenre = g.idGenre')
+			->innerJoin('AppBundle:Types', 't', Join::WITH, 'p.idType = t.idType')
 			->where('g.genre = :genre ')
-			->setParameter('genre', 'hom')
+			->setParameter('genre', $genre)
 			->getQuery();
 
 //		$query = $this->entityManager->createQuery(
@@ -58,10 +60,38 @@ class ProduitManager
 //		)->setParameter('genre', 'hom');
 
 		$produits = $query->getResult();
+//		var_dump($produits);
 		return $produits;
 	}
 
+	public function loadAllProduitsType($genre, $type)
+	{
+		$query = $this->repository->createQueryBuilder('p')
+			->select('p','t.type')
+			->innerJoin('AppBundle:Genres', 'g', Join::WITH, 'p.idGenre = g.idGenre')
+			->innerJoin('AppBundle:Types', 't', Join::WITH, 'p.idType = t.idType')
+			->where('g.genre = :genre')
+			->andWhere('t.type = :type')
+			->setParameter('genre', $genre)
+			->setParameter('type', $type)
+			->getQuery();
 
+//		$query = $this->entityManager->createQuery(
+//			'SELECT p,t.type
+//			    FROM AppBundle:Produits p, AppBundle:Genres g, AppBundle:Types t
+//			    WHERE p.idGenre = g.idGenre
+//			    AND p.idType = t.idType
+//			    AND g.genre = :genre
+//			    AND t.type = :type'
+//		)->setParameters(array('genre' => $genre, 'type' => $type));
+
+
+
+		$produits = $query->getResult();
+//		var_dump($produits);
+
+		return $produits;
+	}
 
 	/**
 	 * @param Integer $produitId
@@ -74,7 +104,7 @@ class ProduitManager
 	}
 
 	/**
-	 * save Film entity
+	 * remove Produit entity
 	 *
 	 * @param Integer $produitId
 	 * @throws \Doctrine\ORM\OptimisticLockException

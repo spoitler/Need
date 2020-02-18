@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h3 class="title-homme">{{ genre }} \ {{ categories }}</h3>
+<h3 class="title-homme">{{ genre }} \ {{ categories|capitalize }}</h3>
 <div class="content-homme">
     <div class="side-filter-homme">
         <div id="sticky-side-filter">
@@ -10,26 +10,40 @@
                 <div class="title-filter-homme"><h5>Catégories</h5>
                     <select class="filter-bar__select" id="filter-bar-categories">
                         <option selected="true">Toutes catégories</option>
-                        <option>Doudounes</option>
+                        <option value="/{{ genre }}/doudounes">Doudounes</option>
                         <option>Vestes</option>
-                        <option>Pulls / Sweats</option>
-                        <option>Chemises</option>
-                        <option>T-shirts</option>
+                        {% if genre=="femme" %}
+                            <option >Pulls / Gilets</option>
+                            <option>Chemises / Tops</option>
+                            <option>Shorts</option>
+                            <option>Robes / Jupes</option>
+                        {% else %}
+                            <option>Pulls / Sweats</option>
+                            <option>Chemises</option>
+                            <option>Shorts / Bermudas</option>
+                            <option>T-shirts</option>
+                        {% endif %}
                         <option>Chaussures</option>
                         <option>Jeans / Chinos</option>
-                        <option>Shorts</option>
                         <option>Accessoires</option>
                     </select>
                     <div class="content-categories-homme cache">
-                        <a href="{{ path('need_all_categories') }}" class="link-color"><p>Toutes catégories</p></a>
+                        <a href="/{{ genre }}" class="link-color"><p>Toutes catégories</p></a>
                         <a href="/{{ genre }}/doudounes" class="link-color"><p>Doudounes</p></a>
                         <a href="/{{ genre }}/vestes" class="link-color"><p>Vestes</p></a>
-                        <a href="/{{ genre }}/pulls" class="link-color"><p>Pulls / Sweats</p></a>
-                        <a href="/{{ genre }}/chemises" class="link-color"><p>Chemises</p></a>
-                        <a href="/{{ genre }}/t-shirts" class="link-color"><p>T-shirts</p></a>
+                        {% if genre=="femme" %}
+                            <a href="/{{ genre }}/pulls-gilets" class="link-color"><p>Pulls / Gilets</p></a>
+                            <a href="/{{ genre }}/chemises-tops" class="link-color"><p>Chemises / Tops</p></a>
+                            <a href="/{{ genre }}/shorts" class="link-color"><p>Shorts</p></a>
+                            <a href="/{{ genre }}/robes-jupes" class="link-color"><p>Robes / Jupes</p></a>
+                        {% else %}
+                            <a href="/{{ genre }}/pulls-sweats" class="link-color"><p>Pulls / Sweats</p></a>
+                            <a href="/{{ genre }}/chemises" class="link-color"><p>Chemises</p></a>
+                            <a href="/{{ genre }}/shorts" class="link-color"><p>Shorts / Bermudas</p></a>
+                            <a href="/{{ genre }}/t-shirts" class="link-color"><p>T-shirts</p></a>
+                        {% endif %}
                         <a href="/{{ genre }}/chaussures" class="link-color"><p>Chaussures</p></a>
                         <a href="/{{ genre }}/jeans-chinos" class="link-color"><p>Jeans / Chinos</p></a>
-                        <a href="/{{ genre }}/shorts" class="link-color"><p>Shorts</p></a>
                         <a href="/{{ genre }}/accessoires" class="link-color"><p>Accessoires</p></a>
                     </div>
                 </div>
@@ -65,12 +79,14 @@
     <div class="content-clothes">
         {% for produit in arrayProduits %}
             <div class="items-news items-clothes">
-                <p><img src="{{ asset( produit.image) }}"></p>
-                <div class="line line-clothes"></div>
-                <div class="info-item-news">
-                    <p>{{  produit.description }}</p>
-                    <p>{{ produit.prix }} €</p>
-                </div>
+                <a class="link-color" href="{{ path('need_produit_id', {'genre': genre, 'type' : produit.type, 'id': produit[0].idProduit}) }}">
+                    <p><img src="{{ asset( produit[0].image) }}"></p>
+                    <div class="line line-clothes"></div>
+                    <div class="info-item-news">
+                        <p>{{  produit[0].description }}</p>
+                        <p>{{ produit[0].prix }} €</p>
+                    </div>
+                </a>
             </div>
         {% else %}
             <div><p>Aucun article trouvé</p></div>

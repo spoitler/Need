@@ -20,31 +20,31 @@
 
             </li>
             <li class="nav-item active dropdown">
-                <a href="{{ path('need_all_categories') }}" class="nav-link dropdown"><span>Homme</span></a>
+                <a href="{{ path('need_homme') }}" class="nav-link dropdown"><span>Homme</span></a>
                 <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">
-                    <div><a class="dropdown-item" href="#">Doudounes</a></div>
-                    <div><a class="dropdown-item" href="#">Vestes</a></div>
-                    <div><a class="dropdown-item" href="#">Pulls/Sweats</a></div>
-                    <div><a class="dropdown-item" href="#">Chemises</a></div>
-                    <div><a class="dropdown-item" href="#">T-shirts</a></div>
-                    <div><a class="dropdown-item" href="#">Chaussures</a></div>
-                    <div><a class="dropdown-item" href="#">Jeans/Chinos</a></div>
-                    <div><a class="dropdown-item" href="#">Shorts/Bermudas</a></div>
-                    <div><a class="dropdown-item" href="#">Accessoires</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'doudounes'}) }}">Doudounes</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'vestes'}) }}">Vestes</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'pulls-sweats'}) }}">Pulls/Sweats</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'chemises'}) }}">Chemises</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 't-shirts'}) }}">T-shirts</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'chaussures'}) }}">Chaussures</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'jeans-chinos'}) }}">Jeans/Chinos</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'shorts'}) }}">Shorts/Bermudas</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_homme_filter', {'filter': 'accessoires'}) }}">Accessoires</a></div>
                 </div>
             </li>
             <li class="nav-item active dropdown">
                 <a href="{{ path('need_femme') }}" class="nav-link dropdown"><span>Femme</span></a>
                 <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">
-                    <div><a class="dropdown-item" href="#">Doudounes</a></div>
-                    <div><a class="dropdown-item" href="#">Vestes</a></div>
-                    <div><a class="dropdown-item" href="#">Pulls/Gilets</a></div>
-                    <div><a class="dropdown-item" href="#">Shorts</a></div>
-                    <div><a class="dropdown-item" href="#">Chemises/Tops</a></div>
-                    <div><a class="dropdown-item" href="#">Chaussures</a></div>
-                    <div><a class="dropdown-item" href="#">Jeans/Chinos</a></div>
-                    <div><a class="dropdown-item" href="#">Robes/Jupes</a></div>
-                    <div><a class="dropdown-item" href="#">Accessoires</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'doudounes'}) }}">Doudounes</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'vestes'}) }}">Vestes</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'pulls-gilets'}) }}">Pulls/Gilets</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'shorts'}) }}">Shorts</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'chemises-tops'}) }}">Chemises/Tops</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'chaussures'}) }}">Chaussures</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'jeans-chinos'}) }}">Jeans/Chinos</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'robes-jupes'}) }}">Robes/Jupes</a></div>
+                    <div><a class="dropdown-item" href="{{ path('need_femme_filter', {'filter': 'accessoires'}) }}">Accessoires</a></div>
                 </div>
             </li>
             <li class="nav-item active dropdown">

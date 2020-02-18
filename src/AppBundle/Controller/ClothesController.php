@@ -15,13 +15,13 @@ class ClothesController extends Controller
 	}
 
 	/**
-	 * @Route ("/homme", name="need_all_categories")
+	 * @Route ("/homme", name="need_homme")
 	 * @throws \Doctrine\ORM\ORMException
 	 */
 
     public function indexAction()
     {
-    	$produits = $this->getManager()->loadAllProduitsHomme();
+    	$produits = $this->getManager()->loadAllProduitsGenre("hom");
         return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => "Toutes catégories"));
     }
 
@@ -31,17 +31,31 @@ class ClothesController extends Controller
 
 	public function femmeAction()
 	{
-		$produits = $this->getManager()->loadAllProduits();
+		$produits = $this->getManager()->loadAllProduitsGenre("fem");
 		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Toutes catégories"));
 	}
 
 	/**
-	 * @Route ("/femme/vestes", name="need_femme_veste")
+	 * @Route ("/homme/{filter}", name="need_homme_filter")
+	 * @param $filter
 	 */
 
-	public function vesteAction()
+	public function hommeFilterAction($filter)
 	{
-		$produits = $this->getManager()->loadProduit(0);
-		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Vestes"));
+		$title = ucwords($filter,"-");
+		$produits = $this->getManager()->loadAllProduitsType("hom", $filter);
+		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => $filter));
+	}
+
+	/**
+	 * @Route ("/femme/{filter}", name="need_femme_filter")
+	 * @param $filter
+	 */
+
+	public function femmeFilterAction($filter)
+	{
+		$title = ucwords($filter,"-");
+		$produits = $this->getManager()->loadAllProduitsType("fem", $filter);
+		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => $filter));
 	}
 }
