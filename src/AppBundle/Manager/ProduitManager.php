@@ -19,7 +19,7 @@ class ProduitManager
 	{
 		$this->entityManager = $em;
 		$this->repository = $em->getRepository('AppBundle:Produits');
-}
+	}
 
 	/**
 	 * Load all produit entity
@@ -35,6 +35,20 @@ class ProduitManager
 	}
 
 	/**
+	 * Load all produit entity
+	 *
+	 * @return Produits[]
+	 *
+	 */
+
+	public function findAllTaille($idProduit)
+	{
+		$query = $this->repository->finAllTailleTypeByProduit($idProduit);
+		$taille = $query->getResult();
+		return $taille;
+	}
+
+	/**
 	 * Load all produit entity for homme
 	 *
 	 * @return Produits[]
@@ -45,7 +59,7 @@ class ProduitManager
 	public function loadAllProduitsGenre($genre)
 	{
 		$query = $this->repository->createQueryBuilder('p')
-			->select('p', 't.type')
+			->select('p','t.type')
 			->innerJoin('AppBundle:Genres', 'g', Join::WITH, 'p.idGenre = g.idGenre')
 			->innerJoin('AppBundle:Types', 't', Join::WITH, 'p.idType = t.idType')
 			->where('g.genre = :genre ')
@@ -64,6 +78,14 @@ class ProduitManager
 		return $produits;
 	}
 
+	/**
+	 * Load all produit entity for homme
+	 *
+	 * @return Produits[]
+	 *
+	 * @throws \Doctrine\ORM\ORMException
+	 */
+
 	public function loadAllProduitsType($genre, $type)
 	{
 		$query = $this->repository->createQueryBuilder('p')
@@ -76,20 +98,8 @@ class ProduitManager
 			->setParameter('type', $type)
 			->getQuery();
 
-//		$query = $this->entityManager->createQuery(
-//			'SELECT p,t.type
-//			    FROM AppBundle:Produits p, AppBundle:Genres g, AppBundle:Types t
-//			    WHERE p.idGenre = g.idGenre
-//			    AND p.idType = t.idType
-//			    AND g.genre = :genre
-//			    AND t.type = :type'
-//		)->setParameters(array('genre' => $genre, 'type' => $type));
-
-
-
 		$produits = $query->getResult();
 //		var_dump($produits);
-
 		return $produits;
 	}
 
@@ -100,7 +110,8 @@ class ProduitManager
 
 	public function loadProduit($produitId)
 	{
-		return $this->repository->find($produitId);
+		$result = $this->repository->find($produitId);
+		return $result;
 	}
 
 	/**

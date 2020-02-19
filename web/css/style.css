@@ -878,13 +878,25 @@ thead th{
 \******************************/
 .container-selection-product{
     height:auto;
-    width: 98px;
-    display: block;
+    width: auto;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container{
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    /*margin: 0 !important;*/
+    padding: 0 !important;
+    max-width: 350px !important;
+    border-radius: 5px;
+}
+
+.img-product{
+    padding: 0 15px;
+    width: 100% !important;
 }
 
 .container-selection-product img{
@@ -895,6 +907,7 @@ thead th{
 
 #container-all-product{
     display: flex;
+    flex-direction: column-reverse;
 }
 
 .container-zoom img{
@@ -917,6 +930,7 @@ thead th{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .ex-zoom-photo {
@@ -933,6 +947,14 @@ thead th{
 
 .item-product{
     padding: 0 !important;
+    width: 100% !important;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.label-picture-product{
+    cursor: pointer;
+    width: 100px;
 }
 
 @media (min-width: 500px) {
