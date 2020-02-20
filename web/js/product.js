@@ -1,3 +1,17 @@
+let idLabel;
+function test(element){
+    console.log(idLabel);
+
+    if ( element.checked === true){
+        if (typeof idLabel != "undefined"){
+            idLabel.classList.remove('click-taille-product');
+        }
+        idLabel = document.getElementById("l"+element.id);
+        idLabel.classList.add('click-taille-product');
+    }
+}
+
+
 function changePreviewProduct(img){
     document.getElementById("img").style.backgroundImage = "url("+img+")";
 }

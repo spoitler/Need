@@ -908,6 +908,7 @@ thead th{
 #container-all-product{
     display: flex;
     flex-direction: column-reverse;
+    overflow: hidden;
 }
 
 .container-zoom img{
@@ -955,6 +956,77 @@ thead th{
 .label-picture-product{
     cursor: pointer;
     width: 100px;
+}
+
+.margin-product{
+    margin: 20px;
+}
+
+.title-product{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.genre-product{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: gray;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.price-product{
+    font-size: 1.7rem;
+}
+
+.title-block-product{
+    font-weight: 600;
+    font-size: 1.7rem;
+    border-bottom: 1px solid black;
+}
+
+.item-taille-product{
+    border: 2px;
+}
+
+.items-taille-product{
+    height: auto !important;
+    width: auto !important;
+    padding: 0 10px;
+}
+
+.item-taille-product-without-slash{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: solid 1px
+    #454545;
+    text-align: center;
+    line-height: 35px;
+    margin: 5px;
+}
+
+.item-taille-product-without-slash:hover, .click-taille-product{
+    border: solid 2px #af5e25;
+    color: #af5e25;
+    background-color: rgba(45,45,45,.03);
+    font-weight: 600;
+}
+
+.radio-button-taille{
+    display: none;
+}
+
+.add-shopping-cart-product{
+    width: 95% !important;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.item-add-shopping-cart-product{
+    width: 100%;
+    text-transform: uppercase;
 }
 
 @media (min-width: 500px) {
