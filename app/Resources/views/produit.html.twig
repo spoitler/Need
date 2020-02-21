@@ -3,45 +3,48 @@
 {% block body %}
 
     <h3 class="title-homme">{{ genre }} \ {{ type|capitalize }} \ {{ produit.description|capitalize }}</h3>
-    <div id="container-all-product">
-        <div class="container-selection-product">
-            {% set images = produit.image|split(',') %}
-            {%  for image in images %}
-                <label class="label-picture-product" onclick='changePreviewProduct("{{ asset(image) }}")'><img src="{{ asset( image ) }}"></label>
-            {% endfor %}
-        </div>
-        <div class="container">
-            <div class="row">
-                <article class="img-product">
-                    <div class="thumbnail item-product">
-                        <div class="ex-thumbnail-zoom">
-                            <div class="ex-thumbnail-zoom-img" data-scale="3" data-image="{{ asset( images[0] ) }}"></div>
+    <div class="container-page-product">
+        <div id="container-all-product">
+            <div class="container-selection-product">
+                {% set images = produit.image|split(',') %}
+                {%  for image in images %}
+                    <label class="label-picture-product" onclick='changePreviewProduct("{{ asset(image) }}")'><img src="{{ asset( image ) }}"></label>
+                {% endfor %}
+            </div>
+            <div class="container">
+                <div class="row">
+                    <article class="img-product">
+                        <div class="thumbnail item-product">
+                            <div class="ex-thumbnail-zoom">
+                                <div class="ex-thumbnail-zoom-img" data-scale="3" data-image="{{ asset( images[0] ) }}"></div>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-info-product">
+            <h2 class="title-product margin-product">{{ produit.description}}</h2>
+            <p class="genre-product margin-product">{{ genre }}</p>
+            <p class="margin-product price-product">{{ produit.prix }} €</p>
+            <h3 class="margin-product title-block-product">Taille</h3>
+            <div class="margin-product">
+                {% for taille in arrayTailles  %}
+                    <label id="l{{ taille.taille }}" class="{% if ("/" in taille.taille) == true %}  items-taille-product {% endif %}item-taille-product-without-slash" for="{{ taille.taille }}">{{ taille.taille|upper }}</label>
+                    <input onclick="test(this)" class="radio-button-taille" type="radio" name="taille" id="{{ taille.taille }}" value="{{ taille.taille }}">
+                {% endfor %}
+            </div>
+            <div class="add-shopping-cart-product">
+                <button type="submit" class="btn btn-primary submit-btn-contact item-add-shopping-cart-product"><strong>Ajouter au panier</strong></button>
+            </div>
+            <h3 class="margin-product title-block-product">Information</h3>
+            <div class="margin-product">
+                <p>{{ produit.description }}</p>
             </div>
         </div>
     </div>
 
-    <div>
-        <h2 class="title-product margin-product">{{ produit.description}}</h2>
-        <p class="genre-product margin-product">{{ genre }}</p>
-        <p class="margin-product price-product">{{ produit.prix }} €</p>
-        <h3 class="margin-product title-block-product">Taille</h3>
-        <div class="margin-product">
-            {% for taille in arrayTailles  %}
-                <label id="l{{ taille.taille }}" class="{% if ("/" in taille.taille) == true %}  items-taille-product {% endif %}item-taille-product-without-slash" for="{{ taille.taille }}">{{ taille.taille|upper }}</label>
-                <input onclick="test(this)" class="radio-button-taille" type="radio" name="taille" id="{{ taille.taille }}" value="{{ taille.taille }}">
-            {% endfor %}
-        </div>
-        <div class="add-shopping-cart-product">
-            <button type="submit" class="btn btn-primary submit-btn-contact item-add-shopping-cart-product"><strong>Ajouter au panier</strong></button>
-        </div>
-        <h3 class="margin-product title-block-product">Information</h3>
-        <div class="margin-product">
-            <p>{{ produit.description }}</p>
-        </div>
-    </div>
 
     <script src="{{ asset('js/product.js') }}" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
