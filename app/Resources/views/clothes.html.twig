@@ -80,7 +80,8 @@
             {% for produit in arrayProduits %}
                 <div class="items-news items-clothes">
                     <a class="link-color" href="{{ path('need_produit_id', {'genre': genre, 'type' : produit.type, 'id': produit[0].idProduit}) }}">
-                        <p><img src="{{ asset( produit[0].image) }}"></p>
+                        {% set images = produit[0].image|split(',') %}
+                            <p><img src="{{ asset( images[0] ) }}"></p>
                         <div class="line line-clothes"></div>
                         <div class="info-item-news">
                             <p>{{  produit[0].description }}</p>
