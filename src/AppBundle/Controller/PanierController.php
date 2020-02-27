@@ -14,6 +14,6 @@ class PanierController extends Controller
 
 	public function indexAction()
 	{
-		return $this->render('panier.html.twig', array());
+		return $this->render('need/panier.html.twig', array());
 	}
 }

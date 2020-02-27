@@ -22,7 +22,7 @@ class ClothesController extends Controller
     public function indexAction()
     {
     	$produits = $this->getManager()->loadAllProduitsGenre("hom");
-        return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => "Toutes catégories"));
+        return $this->render('need/clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => "Toutes catégories"));
     }
 
 	/**
@@ -32,7 +32,7 @@ class ClothesController extends Controller
 	public function femmeAction()
 	{
 		$produits = $this->getManager()->loadAllProduitsGenre("fem");
-		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Toutes catégories"));
+		return $this->render('need/clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => "Toutes catégories"));
 	}
 
 	/**
@@ -44,7 +44,7 @@ class ClothesController extends Controller
 	{
 		$title = ucwords($filter,"-");
 		$produits = $this->getManager()->loadAllProduitsType("hom", $filter);
-		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => $filter));
+		return $this->render('need/clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "homme", 'categories' => $filter));
 	}
 
 	/**
@@ -56,6 +56,6 @@ class ClothesController extends Controller
 	{
 		$title = ucwords($filter,"-");
 		$produits = $this->getManager()->loadAllProduitsType("fem", $filter);
-		return $this->render('clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => $filter));
+		return $this->render('need/clothes.html.twig', array('arrayProduits' => $produits, 'genre' => "femme", 'categories' => $filter));
 	}
 }

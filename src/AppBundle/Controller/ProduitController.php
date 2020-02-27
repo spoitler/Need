@@ -27,6 +27,6 @@ class ProduitController extends Controller
 	{
 		$produit = $this->getManager()->loadProduit($id);
 		$taille = $this->getManager()->findAllTaille($produit->getIdTaille());
-		return $this->render('produit.html.twig', array('produit'=> $produit, 'arrayTailles' => $taille, 'genre' => $genre, 'type' => $type));
+		return $this->render('need/produit.html.twig', array('produit'=> $produit, 'arrayTailles' => $taille, 'genre' => $genre, 'type' => $type));
 	}
 }

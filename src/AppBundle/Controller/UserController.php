@@ -14,7 +14,7 @@ class UserController extends Controller
 
 	public function indexAction()
 	{
-		return $this->render('user.html.twig', array());
+		return $this->render('need/user.html.twig', array());
 	}
 
 	/**
@@ -23,7 +23,7 @@ class UserController extends Controller
 
 	public function infoAction()
 	{
-		return $this->render('user_info.html.twig', array());
+		return $this->render('need/user_info.html.twig', array());
 	}
 
 	/**
@@ -32,7 +32,7 @@ class UserController extends Controller
 
 	public function passwordAction()
 	{
-		return $this->render('password_update.html.twig', array());
+		return $this->render('need/password_update.html.twig', array());
 	}
 
 	/**
@@ -41,6 +41,6 @@ class UserController extends Controller
 
 	public function commandeAction()
 	{
-		return $this->render('commandes.html.twig', array());
+		return $this->render('need/commandes.html.twig', array());
 	}
 }

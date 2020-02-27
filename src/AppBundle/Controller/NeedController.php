@@ -16,7 +16,7 @@ class NeedController extends Controller
     {
         $message = "hello World ! ";
 
-        return $this->render('index.html.twig', array());
+        return $this->render('need/index.html.twig', array());
     }
 
     /**
@@ -26,7 +26,7 @@ class NeedController extends Controller
     public function marquesAction()
     {
 
-        return $this->render('marques.html.twig', array());
+        return $this->render('need/marques.html.twig', array());
     }
 
     /**
@@ -36,7 +36,7 @@ class NeedController extends Controller
     public function aboutAction()
     {
 
-        return $this->render('about.html.twig', array());
+        return $this->render('need/about.html.twig', array());
     }
 
     /**
@@ -46,7 +46,7 @@ class NeedController extends Controller
     public function contactAction()
     {
 
-        return $this->render('contact.html.twig', array());
+        return $this->render('need/contact.html.twig', array());
     }
 
 
