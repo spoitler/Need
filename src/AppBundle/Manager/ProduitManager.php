@@ -115,6 +115,18 @@ class ProduitManager
 	}
 
 	/**
+	 * Save Film entity
+	 * @param Produits $produits
+	 * @throws \Doctrine\ORM\OptimisticLockException
+	 */
+
+	public function saveProduit(Produits $produits)
+	{
+		$this->entityManager->persist($produits);
+		$this->entityManager->flush();
+	}
+
+	/**
 	 * remove Produit entity
 	 *
 	 * @param Integer $produitId

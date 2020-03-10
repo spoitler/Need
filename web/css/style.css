@@ -1157,8 +1157,6 @@ thead th{
         flex-direction: column;
         justify-content: initial;
     }
-
-
 }
 
 @media (min-width: 991px){
