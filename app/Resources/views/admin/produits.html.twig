@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     Liste des produits
 {% endblock %}
@@ -8,21 +10,35 @@
         <thead>
         {%  dump(arrayProduits) %}
             <th>Titre</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Taille</th>
+            <th>Couleur</th>
+            <th>Stock</th>
+            <th>Reference</th>
+            <th>Categories</th>
+            <th>Type</th>
             <th>Genre</th>
-            <th>Année</th>
-            <th>Résumé</th>
+            <th>Prix</th>
             <th width="120"></th>
         </thead>
     <tbody>
     {% for produit in arrayProduits %}
         <tr id="{{  produit.idProduit }}">
-            <td id="titre">{{ produit.description }}</td>
-            <td>{{ produit.idGenre }}</td>
+            <td id="titre">{{ produit.titre }}</td>
+            <td>{{ produit.image }}</td>
             <td>{{ produit.description }}</td>
-            <td>{{ produit.description}}</td>
-{#            <td><a class="btn btn-primary btn-sm" href="{{ path('film_edit', { 'id': produit.idProduit }) }}" title="Modifier le film">#}
-{#                    <i class="fa fa-edit" aria-hidden="true"></i>&nbsp;Modifier</a>#}
-{#            </td>#}
+            <td>{{ produit.idTaille.taille }}</td>
+            <td>{% if produit.idCouleur is not defined %} {{ produit.idCouleur.couleur }} {%  else %} {{ "Null" }} {% endif %}</td>
+            <td>{{ produit.stock }}</td>
+            <td>{% if produit.idReference is not defined %} {{ produit.idReference.reference }} {%  else %} {{ "Null" }} {% endif %}</td>
+            <td>{% if produit.idCategories is not defined %} {{ produit.idCategories.categories }} {%  else %} {{ "Null" }} {% endif %}</td>
+            <td>{% if produit.idType is not defined %} {{ produit.idType.type }} {%  else %} {{ "Null" }} {% endif %}</td>
+            <td>{% if produit.idGenre is not defined %} {{ produit.idGenre.genre }} {%  else %} {{ "Null" }} {% endif %}</td>
+            <td>{{ produit.prix }}</td>
+            <td><a class="btn btn-primary btn-sm" href="{{ path('admin_Produit', { 'id': produit.idProduit }) }}" title="Modifier le film">
+                    <i class="fa fa-edit" aria-hidden="true"></i>&nbsp;Modifier</a>
+            </td>
         </tr>
     {% else %}
         <tr>

@@ -16,6 +16,11 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="titre" type="string" column="titre" length="100" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="description" type="text" column="description" length="65535" nullable="false">
       <options>
         <option name="fixed"/>
@@ -36,14 +41,14 @@
         <option name="unsigned"/>
       </options>
     </field>
-    <field name="idReference" type="string" column="id_reference" length="100" nullable="false">
+    <field name="idReference" type="integer" column="id_reference" nullable="false">
       <options>
-        <option name="fixed"/>
+        <option name="unsigned"/>
       </options>
     </field>
-    <field name="idCategories" type="string" column="id_categories" length="50" nullable="false">
+    <field name="idCategories" type="integer" column="id_categories" nullable="false">
       <options>
-        <option name="fixed"/>
+        <option name="unsigned"/>
       </options>
     </field>
     <field name="idType" type="integer" column="id_type" nullable="false">
@@ -51,11 +56,7 @@
         <option name="unsigned"/>
       </options>
     </field>
-    <field name="prix" type="integer" column="prix" nullable="false">
-      <options>
-        <option name="unsigned"/>
-      </options>
-    </field>
+    <field name="prix" type="float" column="prix" precision="10" scale="0" nullable="false"/>
     <field name="idGenre" type="integer" column="id_genre" nullable="false">
       <options>
         <option name="unsigned"/>

@@ -31,21 +31,35 @@ class Produits
     /**
      * @var string
      *
+     * @ORM\Column(name="titre", type="string", length=100, nullable=false)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
+
     private $description;
 
     /**
-     * @var integer
+     * @var \Tailles
      *
-     * @ORM\Column(name="id_taille", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Tailles")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_taille", referencedColumnName="id_taille")
+     * })
      */
     private $idTaille;
 
     /**
-     * @var integer
+     * @var \Couleurs
      *
-     * @ORM\Column(name="id_couleur", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Couleurs")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_couleur", referencedColumnName="id_couleur")
+     * })
      */
     private $idCouleur;
 
@@ -57,23 +71,32 @@ class Produits
     private $stock;
 
     /**
-     * @var string
+     * @var \Reference
      *
-     * @ORM\Column(name="id_reference", type="string", length=100, nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Reference")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_reference", referencedColumnName="id_reference")
+     * })
      */
     private $idReference;
 
     /**
-     * @var string
+     * @var \Categories
      *
-     * @ORM\Column(name="id_categories", type="string", length=50, nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Categories")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_categories", referencedColumnName="id_categorie")
+     * })
      */
     private $idCategories;
 
     /**
-     * @var integer
+     * @var \Types
      *
-     * @ORM\Column(name="id_type", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_type", referencedColumnName="id_type")
+     * })
      */
     private $idType;
 
@@ -85,9 +108,12 @@ class Produits
     private $prix;
 
     /**
-     * @var integer
+     * @var \Genres
      *
-     * @ORM\Column(name="id_genre", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Genres")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_genre", referencedColumnName="id_genre")
+     * })
      */
     private $idGenre;
 
@@ -126,6 +152,33 @@ class Produits
     {
         return $this->image;
     }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return Produits
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+
+
 
     /**
      * Set description
